@@ -1,8 +1,6 @@
 #tools {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
 }
 
 .tool {
@@ -20,11 +18,30 @@
 .tips {
     border-radius: 10px;
     background-color: #3d3d3d;
-    /*cursor: pointer;*/
 
     color: white;
     text-decoration: none;
 
     padding: 20px 30px;
     margin: 10px;
+}
+
+/*
+SMARTPHONES SPECIFIC STYLES
+*/
+@media only screen and (min-width: 340px) and (max-width: 480px){
+    #tools {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*
+DESKTOP SPECIFIC STYLES
+*/
+@media only screen and (min-width: 481px) {
+    #tools {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
